@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import uniqid from 'uniqid';
 
-import userActions from '@app/actions/users';
+import Connector from './connector';
 
-class ListView extends Component {
+@Connector
+export default class ListView extends Component {
     componentDidMount() {
         this.props.getUsers();
     }
@@ -37,21 +37,3 @@ class ListView extends Component {
         );
     }
 }
-
-const mapStateToProps = state => {
-    return {
-        ...state.restReducer,
-        items: state.usersReducer.users
-    };
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        getUsers: () => dispatch(userActions.getUsers())
-    };
-};
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(ListView);
