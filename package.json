@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack",
+        "watch": "webpack --watch",
         "prettier": "node_modules/.bin/prettier --config .prettierrc --write src/**/*.{js} package.json *.prettierrc",
         "start": "serve -s public",
         "test": "echo \"Error: no test specified\" && exit 1"
