@@ -5,7 +5,7 @@ import Menu from '@app/components/Menu';
 const App = () => {
     return (
         <Fragment>
-            <h3>Home Page</h3>
+            <h3>List Page</h3>
             <Menu />
         </Fragment>
     );

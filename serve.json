@@ -1,0 +1,9 @@
+{
+    "public": "public",
+    "cleanUrls": true,
+    "rewrites": [
+        { "source": "/", "destination": "/index.html" },
+        { "source": "/details", "destination": "/details.html" },
+        { "source": "/list", "destination": "/list.html" }
+    ]
+}
