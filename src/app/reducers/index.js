@@ -27,12 +27,18 @@ const restReducer = (state = REST_INITIAL_STATE, action) => {
 };
 
 const USERS_INITIAL_STATE = {
+    user: {},
     users: []
 };
 
 const usersReducer = (state = USERS_INITIAL_STATE, action) => {
     const { type, payload } = action;
     switch (type) {
+        case usersActions.ACTION_TYPES.SET_USER:
+            return {
+                ...state,
+                user: payload
+            };
         case usersActions.ACTION_TYPES.SET_USERS:
             return {
                 ...state,

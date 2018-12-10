@@ -31,7 +31,11 @@ export default class ListView extends Component {
         return (
             <ul>
                 {items.map(item => {
-                    return <li key={uniqid()}>{`${item.last_name}, ${item.first_name}`}</li>;
+                    return (
+                        <li key={uniqid()}>
+                            <a href={`/details/${item.id}`}>{`${item.last_name}, ${item.first_name}`}</a>
+                        </li>
+                    );
                 })}
             </ul>
         );
